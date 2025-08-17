@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vertical Systems — Full‑stack AI systems for real‑world outcomes</title>
+<meta name="description" content="Vertical Systems builds premium AI systems, voice assistants, chatbots, workflow automations, and full‑stack AI applications that deliver measurable business outcomes." />
+<!-- Open Graph / Twitter (gradient placeholders) -->
+<meta property="og:title" content="Vertical Systems — Premium AI Agency" />
+<meta property="og:description" content="Full‑stack AI systems for real‑world outcomes." />
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%2300E5FF'/><stop offset='1' stop-color='%23FF2BD1'/></linearGradient></defs><rect width='100%' height='100%' fill='%230A0A0A'/><rect x='40' y='40' width='1120' height='550' rx='24' fill='url(%23g)' opacity='0.25'/><text x='60' y='120' fill='%23fff' font-size='64' font-family='Inter,system-ui,sans-serif' font-weight='700'>Vertical Systems</text><text x='60' y='190' fill='%23D0D0D0' font-size='32' font-family='Inter,system-ui,sans-serif'>Full‑stack AI systems for real‑world outcomes</text></svg>"/>
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<?xml version='1.0'?><svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop stop-color='%2300E5FF'/><stop offset='1' stop-color='%23FF2BD1'/></linearGradient></defs><rect rx='6' width='32' height='32' fill='%230A0A0A'/><path d='M8 22 L14 10 L16 14 L20 6 L24 22' stroke='url(%23g)' stroke-width='2.5' fill='none' stroke-linecap='round'/></svg>">
+<style>
+/* =========================
+   Premium Single-File Styles
+   ========================= */
+:root{
+  /* Brand (tunable) */
+  --brand-name:"Vertical Systems";
+  --brand-tagline:"Full-stack AI systems for real-world outcomes";
+  /* Colors */
+  --ink:#0a0a0a; --ink-2:#0f1115; --ink-3:#12141a; --muted:#9aa0aa; --text:#e9edf1; --white:#ffffff;
+  --cyan:#00e5ff; --magenta:#ff2bd1; --accent: linear-gradient(120deg, var(--cyan), var(--magenta));
+  --glass: rgba(255,255,255,.05); --border: rgba(255,255,255,.12);
+  /* Spacing scale */
+  --s0:.25rem; --s1:.5rem; --s2:.75rem; --s3:1rem; --s4:1.5rem; --s5:2rem; --s6:3rem; --s7:4rem; --s8:6rem; --max:72rem;
+  /* Grid */
+  --maxw: 1200px; --gutter: 1rem; --cols:12; 
+  /* Type scale (fluid) */
+  --step--1: clamp(.78rem, .78rem + .2vw, .9rem);
+  --step-0: clamp(.95rem, .9rem + .3vw, 1.05rem);
+  --step-1: clamp(1.15rem, 1rem + .6vw, 1.35rem);
+  --step-2: clamp(1.35rem, 1.2rem + 1.0vw, 1.7rem);
+  --step-3: clamp(1.7rem, 1.4rem + 1.6vw, 2.2rem);
+  --step-4: clamp(2.2rem, 1.7rem + 2.4vw, 3rem);
+  --step-5: clamp(2.8rem, 2rem + 3.5vw, 4rem);
+  /* Motion */
+  --dur-1:160ms; --dur-2:300ms; --dur-3:600ms; --ease: cubic-bezier(.2,.7,.2,1);
+  /* Elevation */
+  --shadow-1: 0 1px 0 rgba(255,255,255,.06) inset, 0 8px 30px rgba(0,0,0,.35);
+  --shadow-2: 0 1px 0 rgba(255,255,255,.06) inset, 0 12px 45px rgba(0,0,0,.5);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  margin:0; background: radial-gradient(1200px 600px at 20% 0%, rgba(0,229,255,.08), transparent),
+  radial-gradient(900px 500px at 100% 20%, rgba(255,43,209,.07), transparent), var(--ink);
+  color:var(--text); font: 500 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, sans-serif; letter-spacing:.01em;
+}
+.container{max-width:var(--maxw); margin:0 auto; padding:0 var(--gutter)}
+section{padding:var(--s7) 0}
+h1,h2,h3{line-height:1.15; margin:0 0 var(--s3)}
+h1{font-size:var(--step-5); letter-spacing:-.01em; font-weight:800}
+h2{font-size:var(--step-3); font-weight:750}
+h3{font-size:var(--step-2); font-weight:700}
+p{margin:0 0 var(--s3)}
+.lead{font-size:var(--step-1); color:#cdd3db}
+.btn{position:relative; display:inline-flex; align-items:center; gap:.6rem; cursor:pointer; border:1px solid var(--border); padding:.85rem 1.2rem; border-radius:14px; background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03)); color:var(--text); box-shadow:var(--shadow-1); transition:transform var(--dur-1) var(--ease), border-color var(--dur-1), background var(--dur-1); will-change:transform}
+.btn:hover{transform:translateY(-2px)}
+.btn--primary{background:linear-gradient(180deg, rgba(0,0,0,.0), rgba(255,255,255,.02)), var(--accent); color:#081016; border-color:transparent}
+.btn--ghost{background:rgba(255,255,255,.03)}
+.btn svg{width:18px; height:18px}
+
+/* Header */
+.header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(10px); background:rgba(10,10,10,.55); border-bottom:1px solid var(--border)}
+.nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+.logo{display:flex; align-items:center; gap:.75rem; font-weight:800; letter-spacing:.06em}
+.logo .mark{width:28px; height:28px; border-radius:9px; background:radial-gradient(circle at 30% 30%, var(--cyan), transparent 55%), radial-gradient(circle at 70% 70%, var(--magenta), transparent 55%), #0e0e0e; border:1px solid var(--border)}
+.nav a{color:#cfd5dd; text-decoration:none; margin:0 .75rem; font-size:var(--step-0)}
+.theme-toggle{margin-left:.5rem}
+.progress{position:fixed; top:0; left:0; width:0; height:3px; background:var(--accent); z-index:60}
+
+/* Canvas background */
+#bg{position:fixed; inset:0; z-index:-1}
+.cursor-glow{position:fixed; width:160px; height:160px; border-radius:50%; pointer-events:none; background:radial-gradient(circle, rgba(0,229,255,.22), rgba(255,43,209,.18) 35%, transparent 60%); mix-blend-mode:screen; transform:translate(-50%,-50%); opacity:.5}
+@media (prefers-reduced-motion: reduce){.cursor-glow{display:none}}
+
+/* Grid helpers */
+.grid{display:grid; gap:var(--s4)}
+.grid-2{grid-template-columns: repeat(2, minmax(0,1fr))}
+.grid-3{grid-template-columns: repeat(3, minmax(0,1fr))}
+.grid-4{grid-template-columns: repeat(4, minmax(0,1fr))}
+@media (max-width: 960px){.grid-2,.grid-3,.grid-4{grid-template-columns:1fr}}
+
+.card{background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:20px; padding:var(--s5); box-shadow:var(--shadow-1)}
+.card:hover{box-shadow:var(--shadow-2)}
+.card.neon:hover{outline:1px solid transparent; box-shadow:0 0 0 1px rgba(255,255,255,.15) inset, 0 0 18px rgba(0,229,255,.25), 0 0 32px rgba(255,43,209,.18)}
+
+/* Reveal */
+.reveal{opacity:0; transform:translateY(16px); transition:opacity var(--dur-2) var(--ease), transform var(--dur-2) var(--ease)}
+.reveal.is-visible{opacity:1; transform:translateY(0)}
+
+/* Hero */
+.hero{padding-top:calc(var(--s7) + 32px)}
+.hero-wrap{display:grid; grid-template-columns: 1.1fr .9fr; gap:var(--s5)}
+.hero h1{background:linear-gradient(90deg, #fff, #e5fbff 40%, #ffeeff 60%, #fff); -webkit-background-clip:text; background-clip:text; color:transparent}
+.shimmer{background-size:200% 100%; animation:shimmer 2.8s var(--ease) 1}
+@keyframes shimmer{from{background-position:-100% 0} to{background-position:100% 0}}
+.hero-right{position:relative; min-height:360px; border-radius:22px; border:1px solid var(--border); background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.01))}
+#ai-map{position:absolute; inset:0}
+.trustbar{display:flex; align-items:center; gap:1.25rem; opacity:.8; flex-wrap:wrap}
+.logo-chip{display:flex; align-items:center; gap:.5rem; padding:.5rem .75rem; border-radius:12px; background:rgba(255,255,255,.03); border:1px solid var(--border); font-size:.85rem; color:#c7cbd3}
+.logo-chip svg{opacity:.7}
+@media (max-width: 1024px){.hero-wrap{grid-template-columns:1fr}}
+
+/* Capabilities */
+.cap-card{position:relative; overflow:hidden}
+.cap-card .head{display:flex; align-items:center; gap:.75rem}
+.cap-card .icon{width:24px; height:24px}
+.cap-card .details{max-height:0; overflow:hidden; transition:max-height var(--dur-3) var(--ease)}
+.cap-card.open .details{max-height:320px}
+.cap-card:hover{transform:translateY(-2px)}
+.cap-card:hover .edge{opacity:1}
+.edge{position:absolute; inset:0; pointer-events:none; border-radius:20px; box-shadow: 0 0 0 1px rgba(255,255,255,.06) inset, 0 0 36px rgba(0,229,255,.18), 0 0 52px rgba(255,43,209,.16); opacity:0; transition:opacity var(--dur-2)}
+.mini-diagram{width:100%; height:90px}
+
+/* Carousel */
+.carousel{position:relative}
+.carousel-track{display:flex; gap:1rem; overflow:hidden}
+.cs-card{min-width: 320px; flex:0 0 320px}
+.carousel .arrow{position:absolute; top:50%; transform:translateY(-50%); border-radius:50%; width:40px; height:40px; display:grid; place-items:center; background:rgba(255,255,255,.06); border:1px solid var(--border)}
+.carousel .arrow.left{left:-.5rem}
+.carousel .arrow.right{right:-.5rem}
+
+/* Process */
+.timeline{display:grid; grid-template-columns: repeat(5,1fr); gap:var(--s3)}
+.step{position:relative; padding:var(--s4); border-radius:18px; border:1px solid var(--border); background:rgba(255,255,255,.03)}
+.connector{position:absolute; top:50%; right:-10px; width:20px; height:2px; background:linear-gradient(90deg, var(--cyan), var(--magenta)); opacity:.65}
+.timeline .step:last-child .connector{display:none}
+.step .more{max-height:0; overflow:hidden; transition:max-height var(--dur-3) var(--ease)}
+.step.open .more{max-height:140px}
+
+/* ROI Modal */
+.modal{position:fixed; inset:0; display:none; align-items:center; justify-content:center; background:rgba(0,0,0,.6)}
+.modal.open{display:flex}
+.modal-panel{width:min(680px, 92vw); border-radius:18px; padding:var(--s5); border:1px solid var(--border); background:rgba(20,20,22,.95); box-shadow:var(--shadow-2)}
+.modal header{display:flex; align-items:center; justify-content:space-between}
+.input{width:100%; padding:.9rem 1rem; background:rgba(255,255,255,.04); border:1px solid var(--border); border-radius:14px; color:var(--text)}
+.result{font-size:var(--step-2); font-weight:800}
+
+/* Testimonials */
+.testi{display:grid; gap:var(--s4)}
+.testi .quote{position:relative}
+.testi .quote:before{content:'\201C'; position:absolute; left:-.3rem; top:-.8rem; font-size:3rem; color:#9aa0aa33}
+.stars{display:flex; gap:.25rem}
+
+/* Pricing */
+.plan{position:relative}
+.plan .price{font-size:var(--step-3); font-weight:800}
+.badge{display:inline-block; padding:.2rem .6rem; border-radius:999px; border:1px solid var(--border); background:rgba(255,255,255,.04); font-size:.75rem}
+
+/* CTA band */
+.cta-band{position:relative; overflow:hidden; border:1px solid var(--border); border-radius:22px; background:radial-gradient(1200px 400px at 10% 0%, rgba(0,229,255,.18), transparent), radial-gradient(1000px 500px at 90% 100%, rgba(255,43,209,.18), transparent), rgba(255,255,255,.02)}
+
+/* Footer */
+.footer a{color:#cfd5dd; text-decoration:none}
+.footer small{color:#9aa0aa}
+
+/* Tooltip */
+.tooltip{position:relative}
+.tooltip:hover .tip{opacity:1; transform:translateY(0)}
+.tip{position:absolute; bottom:calc(100% + 8px); left:50%; transform:translate(-50%, 6px); background:#0f1118; color:#cfd5dd; padding:.4rem .6rem; border-radius:8px; border:1px solid var(--border); font-size:.75rem; white-space:nowrap; opacity:0; transition:all var(--dur-1) var(--ease)}
+
+/* Scroll-to-top */
+.to-top{position:fixed; right:18px; bottom:18px; z-index:40; width:52px; height:52px; border-radius:50%; border:1px solid var(--border); background:rgba(255,255,255,.06); display:grid; place-items:center}
+.to-top[hidden]{display:none}
+.progress-ring{position:absolute; inset:0; transform:rotate(-90deg)}
+
+/* Accessibility focus */
+:focus-visible{outline:2px solid var(--cyan); outline-offset:2px}
+
+</style>
+</head>
+<body>
+<div class="progress" id="progress"></div>
+<canvas id="bg"></canvas>
+<div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+<header class="header" role="banner">
+  <div class="container nav">
+    <a class="logo" href="#hero" aria-label="Go to hero">
+      <span class="mark" aria-hidden="true"></span>
+      <span id="brandName">Vertical Systems</span>
+    </a>
+    <nav aria-label="Primary" class="hide-on-mobile">
+      <a href="#capabilities">Capabilities</a>
+      <a href="#cases">Case Studies</a>
+      <a href="#process">Process</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div>
+      <button class="btn btn--ghost tooltip theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span class="tip">Dark ↔︎ Darker</span>
+      </button>
+      <button class="btn btn--primary magnetic" data-jump="#cta">Book a Strategy Call
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <!-- Hero -->
+  <section id="hero" class="hero">
+    <div class="container hero-wrap reveal">
+      <div>
+        <h1 id="headline" class="shimmer">Transform Your Business with AI</h1>
+        <p class="lead">We build intelligent systems, chatbots, and automation for the future of work. <strong>Enterprise‑grade delivery</strong> with measurable ROI.</p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:var(--s4)">
+          <button class="btn btn--primary magnetic" data-jump="#cta">Book a Strategy Call</button>
+          <button class="btn btn--ghost magnetic" data-jump="#cases">See Case Studies</button>
+        </div>
+        <div style="height:var(--s5)"></div>
+        <div class="trustbar" aria-label="Trusted by">
+          <span class="logo-chip"><svg class="i" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/></svg> Acme</span>
+          <span class="logo-chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/></svg> Novo</span>
+          <span class="logo-chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12h16M4 6h16M4 18h16"/></svg> Orbit</span>
+          <span class="logo-chip"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg> Zenith</span>
+        </div>
+      </div>
+      <div class="hero-right card">
+        <canvas id="ai-map" aria-hidden="true"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section id="capabilities">
+    <div class="container">
+      <h2 class="reveal">Capabilities</h2>
+      <p class="lead reveal">Services engineered for <strong>speed‑to‑value</strong> and secure scale.</p>
+      <div class="grid grid-3" id="capGrid" style="margin-top:var(--s4)"></div>
+    </div>
+  </section>
+
+  <!-- Outcomes / Case Studies -->
+  <section id="cases">
+    <div class="container">
+      <h2 class="reveal">Outcomes</h2>
+      <p class="lead reveal">Selected case studies showing real, measured impact.</p>
+      <div class="carousel card reveal" aria-roledescription="carousel">
+        <button class="arrow left" aria-label="Previous" id="prevCs">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <div class="carousel-track" id="csTrack"></div>
+        <button class="arrow right" aria-label="Next" id="nextCs">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process">
+    <div class="container">
+      <h2 class="reveal">Our Process</h2>
+      <div class="timeline reveal" id="timeline"></div>
+    </div>
+  </section>
+
+  <!-- ROI Estimator -->
+  <section class="container" style="padding:0 0 var(--s6)">
+    <button class="btn btn--ghost magnetic" id="openRoi">Estimate ROI</button>
+  </section>
+  <div class="modal" id="roiModal" aria-hidden="true" aria-labelledby="roiTitle" role="dialog">
+    <div class="modal-panel" role="document">
+      <header>
+        <h3 id="roiTitle">Mini ROI Estimator</h3>
+        <button class="btn" id="closeRoi" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+      </header>
+      <p class="lead">Quickly estimate potential savings from automation.</p>
+      <div class="grid grid-3" style="margin-top:var(--s4)">
+        <label>Monthly volume<input id="vol" class="input" type="number" inputmode="numeric" placeholder="e.g. 12000" /></label>
+        <label>Avg handle time (min)<input id="aht" class="input" type="number" inputmode="numeric" placeholder="e.g. 6" /></label>
+        <label>Hourly cost ($)<input id="cost" class="input" type="number" inputmode="decimal" placeholder="e.g. 22" /></label>
+      </div>
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-top:var(--s4)">
+        <button class="btn btn--primary" id="calcRoi">Calculate</button>
+        <div>Estimated annual savings: <span class="result" id="roiOut">$0</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div class="container">
+      <h2 class="reveal">What clients say</h2>
+      <div class="testi grid grid-3 reveal">
+        <div class="card glass">
+          <div class="stars">★★★★★</div>
+          <p class="quote">They shipped an AI assistant that changed how we operate.</p>
+          <small>COO, Finserv Scale‑up</small>
+          <svg width="120" height="2" style="margin-top:8px" viewBox="0 0 120 2"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00e5ff"/><stop offset="1" stop-color="#ff2bd1"/></linearGradient></defs><rect width="120" height="2" rx="1" fill="url(#g1)"/></svg>
+        </div>
+        <div class="card glass">
+          <div class="stars">★★★★★</div>
+          <p class="quote">From idea to ROI in 8 weeks. Phenomenal craftsmanship.</p>
+          <small>Head of CX, E‑commerce</small>
+          <svg width="120" height="2" style="margin-top:8px" viewBox="0 0 120 2"><defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00e5ff"/><stop offset="1" stop-color="#ff2bd1"/></linearGradient></defs><rect width="120" height="2" rx="1" fill="url(#g2)"/></svg>
+        </div>
+        <div class="card glass">
+          <div class="stars">★★★★★</div>
+          <p class="quote">Rock‑solid engineering and a thoughtful strategy partner.</p>
+          <small>CTO, Healthcare Platform</small>
+          <svg width="120" height="2" style="margin-top:8px" viewBox="0 0 120 2"><defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#00e5ff"/><stop offset="1" stop-color="#ff2bd1"/></linearGradient></defs><rect width="120" height="2" rx="1" fill="url(#g3)"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing / Engagement Models -->
+  <section id="pricing">
+    <div class="container">
+      <h2 class="reveal">Engagement Models</h2>
+      <div class="grid grid-3 reveal" id="plans"></div>
+      <details class="card" id="included" style="margin-top:var(--s4)">
+        <summary class="badge">What's included</summary>
+        <ul>
+          <li>Security & governance best practices</li>
+          <li>Documentation & enablement sessions</li>
+          <li>Observability & post‑launch optimizations</li>
+        </ul>
+      </details>
+      <section id="faq" style="margin-top:var(--s5)">
+        <h3>FAQ</h3>
+        <details class="card"><summary>How soon can we start?</summary><p>Typically within 1–2 weeks following discovery.</p></details>
+        <details class="card"><summary>Which models & clouds do you support?</summary><p>We are model‑agnostic and deploy across major clouds with strong security posture.</p></details>
+        <details class="card"><summary>How do you ensure ROI?</summary><p>Clear success metrics, phased delivery, and continuous optimization.</p></details>
+      </section>
+    </div>
+  </section>
+
+  <!-- Why Us + CTA Band -->
+  <section class="container">
+    <div class="card reveal">
+      <h3>Why us</h3>
+      <ul>
+        <li><strong>Time‑to‑value:</strong> 6–12 weeks to first impact</li>
+        <li><strong>Security posture:</strong> governance, auditability, PII protection</li>
+        <li><strong>Measurable outcomes:</strong> metrics agreed up‑front</li>
+      </ul>
+    </div>
+    <div class="cta-band card reveal" id="cta" style="margin-top:var(--s5); padding:var(--s6)">
+      <h2 style="margin:0 0 var(--s3)">Ready to build your AI future?</h2>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap">
+        <button class="btn btn--primary magnetic">Book a Strategy Call</button>
+        <button class="btn btn--ghost magnetic">Download One‑Pager</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Footer -->
+<footer class="footer" role="contentinfo" style="margin-top:var(--s7); padding:var(--s6) 0; border-top:1px solid var(--border)">
+  <div class="container grid grid-4">
+    <div>
+      <div class="logo"><span class="mark"></span> <span id="brandName2">Vertical Systems</span></div>
+      <p style="color:#c7cbd3">We design, build, and scale AI products that move the needle.</p>
+      <small>© <span id="year"></span> Vertical Systems</small>
+    </div>
+    <div>
+      <strong>Company</strong>
+      <ul>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Services</strong>
+      <ul>
+        <li><a href="#capabilities">AI Systems</a></li>
+        <li><a href="#capabilities">Voice Assistants</a></li>
+        <li><a href="#capabilities">Workflow Automations</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Contact</strong>
+      <ul>
+        <li><a href="mailto:hello@vertical.ai">hello@vertical.ai</a></li>
+        <li>San Francisco, CA</li>
+        <li style="display:flex; gap:.5rem; margin-top:.5rem">
+          <!-- Social icons inline -->
+          <a aria-label="Twitter" href="#" class="tooltip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 4s-.8 3-3 4c1 10-11 16-18 9 3 0 5-1 6-2-2 0-3-2-3-3.5.5.2 1 .3 1.5.3-2-1-3-5 1-7 2 3 5 4 8 4-.5-2 2-3 3.5-2 .7 0 1.4-.2 2-.5z"/></svg><span class="tip">X / Twitter</span></a>
+          <a aria-label="LinkedIn" href="#" class="tooltip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg><span class="tip">LinkedIn</span></a>
+          <a aria-label="GitHub" href="#" class="tooltip"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C7 2 3 6 3 11c0 4 2.6 7.4 6.2 8.6.4.1.6-.2.6-.5v-2c-2.5.6-3-1.1-3-1.1-.4-1-.9-1.3-.9-1.3-.8-.6.1-.6.1-.6.9.1 1.3 1 1.3 1 .8 1.4 2.1 1 2.6.8.1-.6.3-1 .6-1.3-2-.2-4.1-1-4.1-4.6 0-1 .3-1.8 1-2.5-.1-.3-.4-1.3.1-2.6 0 0 .8-.2 2.6 1 .8-.2 1.7-.3 2.6-.3s1.8.1 2.6.3c1.8-1.2 2.6-1 2.6-1 .5 1.3.2 2.3.1 2.6.6.7 1 1.5 1 2.5 0 3.6-2.1 4.4-4.1 4.6.3.2.6.7.6 1.4v2.1c0 .3.2.6.7.5C18.4 18.4 21 15 21 11c0-5-4-9-9-9z"/></svg><span class="tip">GitHub</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Scroll to top" hidden>
+  <svg class="progress-ring" width="52" height="52"><circle cx="26" cy="26" r="22" stroke="url(#ring)" stroke-width="4" fill="none" stroke-linecap="round"/></svg>
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5l-7 7M12 5l7 7"/></svg>
+  <svg width="0" height="0"><defs><linearGradient id="ring" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00e5ff"/><stop offset="1" stop-color="#ff2bd1"/></linearGradient></defs></svg>
+</button>
+
+<!-- Command Palette -->
+<div class="modal" id="cmdModal" aria-hidden="true" aria-labelledby="cmdTitle" role="dialog">
+  <div class="modal-panel" role="document">
+    <header>
+      <h3 id="cmdTitle">Jump to…</h3>
+      <button class="btn" id="closeCmd" aria-label="Close">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </header>
+    <input class="input" id="cmdInput" placeholder="Type a section: hero, capabilities, cases, process, pricing, faq…" />
+    <div id="cmdResults" style="margin-top:var(--s3)"></div>
+  </div>
+</div>
+
+<script>
+/* =========================
+   Tunable Constants & Config
+   ========================= */
+const CONFIG = {
+  brandName: 'Vertical Systems',
+  tagline: 'Full-stack AI systems for real-world outcomes',
+  // Colors
+  cyan: getComputedStyle(document.documentElement).getPropertyValue('--cyan').trim(),
+  magenta: getComputedStyle(document.documentElement).getPropertyValue('--magenta').trim(),
+  // Animation toggles
+  fps: 30, // canvas bg
+  shimmerOnceKey: 'vs-shimmer-done'
+};
+
+/* =========================
+   Utilities
+   ========================= */
+const $ = (sel, root=document) => root.querySelector(sel);
+const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+const clamp = (n, min, max) => Math.max(min, Math.min(max, n));
+function smoothScrollTo(target){ document.querySelector(target)?.scrollIntoView({behavior: prefersReduced ? 'auto' : 'smooth', block:'start'}); }
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* =========================
+   Scroll progress & theme
+   ========================= */
+const progressEl = $('#progress');
+function updateProgress(){ const h = document.documentElement; const p = (h.scrollTop)/(h.scrollHeight - h.clientHeight); progressEl.style.width = (p*100) + '%'; }
+window.addEventListener('scroll', updateProgress, {passive:true}); updateProgress();
+
+// Theme toggle (dark <-> darker)
+$('#themeToggle').addEventListener('click', ()=>{
+  const b = document.body; b.classList.toggle('darker');
+  if(b.classList.contains('darker')){ b.style.backgroundColor = '#0b0c0f'; }
+  else { b.style.backgroundColor = ''; }
+});
+
+/* =========================
+   Cursor glow (throttled)
+   ========================= */
+const glow = $('#cursorGlow');
+let lastGlow = 0; window.addEventListener('pointermove', e=>{
+  const now = performance.now(); if(now - lastGlow < 16) return; lastGlow = now;
+  glow.style.left = e.clientX + 'px'; glow.style.top = e.clientY + 'px';
+},{passive:true});
+
+/* =========================
+   Magnetic Buttons
+   ========================= */
+$$('.magnetic').forEach(btn=>{
+  const strength = 28;
+  btn.addEventListener('pointermove', e=>{
+    const r = btn.getBoundingClientRect(); const x = e.clientX - (r.left + r.width/2); const y = e.clientY - (r.top + r.height/2);
+    btn.style.transform = `translate(${clamp(x/6,-strength,strength)}px, ${clamp(y/6,-strength,strength)}px)`;
+  });
+  btn.addEventListener('pointerleave', ()=> btn.style.transform='translate(0,0)');
+});
+$$('[data-jump]').forEach(b=> b.addEventListener('click', ()=> smoothScrollTo(b.dataset.jump)));
+
+/* =========================
+   Intersection Reveal
+   ========================= */
+function initReveal(){
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('is-visible'); io.unobserve(e.target);} });
+  }, {threshold:.18});
+  $$('.reveal').forEach(el=> io.observe(el));
+}
+initReveal();
+
+/* =========================
+   Canvas Background: starfield + subtle links
+   ========================= */
+function initCanvasBg(){
+  const c = $('#bg'); const ctx = c.getContext('2d');
+  const DPR = Math.max(1, Math.min(2, window.devicePixelRatio || 1));
+  let w=0,h=0, points=[]; const N=80; const linkDist=140; let raf=0; let last=0; const step=1000/CONFIG.fps;
+  function resize(){ w = c.width = innerWidth*DPR; h = c.height = innerHeight*DPR; c.style.width=innerWidth+'px'; c.style.height=innerHeight+'px'; }
+  function make(){ points = Array.from({length:N}, ()=>({ x: Math.random()*w, y: Math.random()*h, vx:(Math.random()-.5)*.15*DPR, vy:(Math.random()-.5)*.15*DPR })); }
+  function tick(t){ if(prefersReduced){ return; } if(t - last < step){ raf = requestAnimationFrame(tick); return;} last=t; ctx.clearRect(0,0,w,h); ctx.fillStyle='rgba(255,255,255,.7)';
+    for(const p of points){ p.x+=p.vx; p.y+=p.vy; if(p.x<0||p.x>w) p.vx*=-1; if(p.y<0||p.y>h) p.vy*=-1; ctx.globalAlpha=.55; ctx.fillRect(p.x, p.y, 1.2*DPR, 1.2*DPR); }
+    // Links
+    for(let i=0;i<N;i++) for(let j=i+1;j<N;j++){ const a=points[i], b=points[j]; const dx=a.x-b.x, dy=a.y-b.y; const d=Math.hypot(dx,dy); if(d<linkDist*DPR){ ctx.globalAlpha = (1 - d/(linkDist*DPR))*.25; const g = ctx.createLinearGradient(a.x,a.y,b.x,b.y); g.addColorStop(0, CONFIG.cyan); g.addColorStop(1, CONFIG.magenta); ctx.strokeStyle=g; ctx.lineWidth=.6*DPR; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }}
+    raf = requestAnimationFrame(tick);
+  }
+  function start(){ cancelAnimationFrame(raf); resize(); make(); tick(0);} start();
+  addEventListener('resize', ()=>{resize(); make();}, {passive:true});
+}
+initCanvasBg();
+
+/* =========================
+   Hero: AI systems map (nodes/lines)
+   ========================= */
+(function(){
+  const c = $('#ai-map'); const ctx = c.getContext('2d'); const DPR = Math.max(1, Math.min(2, devicePixelRatio||1));
+  function resize(){ const r = c.parentElement.getBoundingClientRect(); c.width=r.width*DPR; c.height=r.height*DPR; c.style.width=r.width+'px'; c.style.height=r.height+'px'; }
+  function node(x,y){ return {x,y, r: 3*DPR + Math.random()*1.5, p: Math.random()*Math.PI*2, s: .6 + Math.random()*.8} }
+  let nodes=[]; function layout(){ nodes = Array.from({length:26}, (_,i)=> node((Math.random()*c.width), (Math.random()*c.height))); }
+  let raf=0; let last=0; const step=1000/CONFIG.fps;
+  function draw(t){ if(prefersReduced){ return; } if(t-last<step){ raf=requestAnimationFrame(draw); return;} last=t; ctx.clearRect(0,0,c.width,c.height);
+    // lines
+    for(let i=0;i<nodes.length;i++) for(let j=i+1;j<nodes.length;j++){ const a=nodes[i], b=nodes[j]; const d=Math.hypot(a.x-b.x,a.y-b.y); if(d<180*DPR){ ctx.globalAlpha=(1-d/(180*DPR))*.35; const g=ctx.createLinearGradient(a.x,a.y,b.x,b.y); g.addColorStop(0, CONFIG.cyan); g.addColorStop(1, CONFIG.magenta); ctx.strokeStyle=g; ctx.lineWidth=.9*DPR; ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke(); }}
+    // nodes pulse
+    for(const n of nodes){ n.p += 0.02*n.s; const r = n.r + Math.sin(n.p)*.6; ctx.globalAlpha=.9; ctx.fillStyle='#ffffff'; ctx.beginPath(); ctx.arc(n.x,n.y,r,0,Math.PI*2); ctx.fill(); }
+    raf=requestAnimationFrame(draw);
+  }
+  function start(){ resize(); layout(); draw(0);} start();
+  addEventListener('resize', start, {passive:true});
+})();
+
+/* =========================
+   Capabilities (interactive cards)
+   ========================= */
+const CAPABILITIES = [
+  {title:'AI Systems', icon:'cpu', benefit:'Bespoke reasoning agents & secure retrieval.', bullets:['Model selection & evaluation','RAG & tool use','Guardrails & observability']},
+  {title:'Full‑stack AI Applications', icon:'stack', benefit:'Cloud‑native products from prototype to launch.', bullets:['Web & mobile','Data pipelines','Infra as code']},
+  {title:'AI Voice Assistants', icon:'voice', benefit:'Realtime voice for phone & web.', bullets:['Low latency','Call flows','CRM logging']},
+  {title:'Chatbots', icon:'bot', benefit:'Sales & support automation with governance.', bullets:['Multi‑channel','KB ingestion','Escalation paths']},
+  {title:'Workflow Automations', icon:'flow', benefit:'Orchestration and RPA at scale.', bullets:['Integrations','Human‑in‑the‑loop','SLAs']},
+  {title:'AI Consulting & Training', icon:'brief', benefit:'Strategy, ROI modeling, enablement.', bullets:['Workshops','Use‑case roadmap','Change management']}
+];
+function iconSVG(name){
+  const base = "stroke='currentColor' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'";
+  const m = {
+    cpu:`<rect x='3' y='3' width='18' height='18' rx='2'/><path d='M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3'/>`,
+    stack:`<rect x='3' y='7' width='18' height='10' rx='2'/><path d='M7 7V5h10v2'/>`,
+    voice:`<rect x='9' y='4' width='6' height='12' rx='3'/><path d='M12 20v-4'/>`,
+    bot:`<rect x='4' y='8' width='16' height='10' rx='3'/><circle cx='9' cy='13' r='1'/><circle cx='15' cy='13' r='1'/><path d='M12 4v3'/>`,
+    flow:`<path d='M4 6h6a4 4 0 0 1 4 4v0a4 4 0 0 0 4 4h2'/><circle cx='4' cy='6' r='2'/><circle cx='20' cy='14' r='2'/>`,
+    brief:`<rect x='3' y='7' width='18' height='12' rx='2'/><path d='M8 7V5h8v2'/>`
+  };
+  return `<svg class='icon' viewBox='0 0 24 24' ${base}>${m[name]||m.cpu}</svg>`;
+}
+function renderCapabilities(){
+  const grid = $('#capGrid'); grid.innerHTML = '';
+  CAPABILITIES.forEach((c,i)=>{
+    const el = document.createElement('div'); el.className='card cap-card neon reveal';
+    el.innerHTML = `
+      <div class='head'>${iconSVG(c.icon)}<div><strong>${c.title}</strong><div style='color:#cfd5dd'>${c.benefit}</div></div></div>
+      <svg class='mini-diagram' viewBox='0 0 200 60' aria-hidden='true'>
+        <defs><linearGradient id='cap${i}' x1='0' y1='0' x2='1' y2='1'><stop stop-color='${CONFIG.cyan}'/><stop offset='1' stop-color='${CONFIG.magenta}'/></linearGradient></defs>
+        <circle cx='30' cy='30' r='6' fill='url(#cap${i})'/>
+        <circle cx='100' cy='20' r='6' fill='url(#cap${i})'/>
+        <circle cx='170' cy='40' r='6' fill='url(#cap${i})'/>
+        <path d='M30 30 Q 65 10, 100 20 T 170 40' stroke='url(#cap${i})' stroke-width='2' fill='none' opacity='.7'/>
+      </svg>
+      <button class='btn btn--ghost' aria-expanded='false'>See details</button>
+      <div class='details'><ul>${c.bullets.map(b=>`<li>${b}</li>`).join('')}</ul></div>
+      <div class='edge'></div>
+    `;
+    const btn = el.querySelector('button');
+    btn.addEventListener('click', ()=>{ const open = el.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open)); });
+    grid.appendChild(el);
+  });
+}
+renderCapabilities();
+
+/* =========================
+   Case Studies Carousel (3 bullets per card)
+   ========================= */
+const CASES = [
+  {title:'Claims Processing Agent', bullets:['Problem: Slow manual triage','Solution: Retrieval‑augmented agent','Metric: 35% cost reduction'], kpi:'↓ 35% cost'},
+  {title:'24/7 Concierge Chat', bullets:['Problem: Missed off‑hours leads','Solution: Sales chatbot with CRM','Metric: +28% conversions'], kpi:'+28% conv'},
+  {title:'AI Phone Assistant', bullets:['Problem: Long handle time','Solution: Realtime voice flows','Metric: −22% AHT'], kpi:'−22% AHT'},
+  {title:'Document Summarizer', bullets:['Problem: Info overload','Solution: Structured summaries','Metric: 4h → 20m'], kpi:'4h → 20m'}
+];
+function initCarousel(){
+  const track = $('#csTrack');
+  track.innerHTML = CASES.map(c=>`<article class='card cs-card'>
+    <span class='badge'>${c.kpi}</span>
+    <h3>${c.title}</h3>
+    <ul>${c.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>
+  </article>`).join('');
+  let i = 0; const prev=$('#prevCs'), next=$('#nextCs');
+  function update(){ track.style.transform = `translateX(${-i*(320+16)}px)`; }
+  prev.addEventListener('click', ()=>{ i = Math.max(0, i-1); update(); });
+  next.addEventListener('click', ()=>{ i = Math.min(CASES.length-1, i+1); update(); });
+  // Touch swipe
+  let sx=0, dx=0; track.addEventListener('touchstart',e=>{sx=e.touches[0].clientX;},{passive:true});
+  track.addEventListener('touchmove',e=>{dx=e.touches[0].clientX - sx;},{passive:true});
+  track.addEventListener('touchend',()=>{ if(dx<-30) next.click(); else if(dx>30) prev.click(); dx=0; });
+}
+initCarousel();
+
+/* =========================
+   Process timeline
+   ========================= */
+const STEPS = [
+  {t:'Discovery', v:'Prioritize use‑cases, define success metrics.'},
+  {t:'Design', v:'Solution architecture, data & model plan.'},
+  {t:'Build', v:'Iterative development with guardrails.'},
+  {t:'Deploy', v:'Hardening, observability, rollout.'},
+  {t:'Iterate', v:'Continuous optimization & enablement.'},
+];
+(function renderTimeline(){ const tl=$('#timeline'); tl.innerHTML='';
+  STEPS.forEach(s=>{ const el=document.createElement('div'); el.className='step reveal'; el.innerHTML=`<div class='head'><span class='badge'>${s.t}</span></div><p class='more'>${s.v}</p><div class='connector'></div>`; el.tabIndex=0; el.addEventListener('click',()=> el.classList.toggle('open')); el.addEventListener('keypress',e=>{if(e.key==='Enter')el.classList.toggle('open')}); tl.appendChild(el); }); })();
+
+/* =========================
+   ROI Modal (accessible)
+   ========================= */
+const roiModal = $('#roiModal'), openRoi=$('#openRoi'), closeRoi=$('#closeRoi');
+function trapFocus(modal){
+  const f = "button,[href],input,select,textarea,[tabindex]:not([tabindex='-1'])";
+  const nodes = $$(f, modal); const first = nodes[0], last = nodes[nodes.length-1];
+  function cycle(e){ if(e.key!=='Tab') return; if(e.shiftKey && document.activeElement===first){ last.focus(); e.preventDefault(); } else if(!e.shiftKey && document.activeElement===last){ first.focus(); e.preventDefault(); } }
+  modal.addEventListener('keydown', cycle);
+}
+function openModal(){ roiModal.classList.add('open'); roiModal.setAttribute('aria-hidden','false'); $('#vol').focus(); trapFocus(roiModal); }
+function closeModal(){ roiModal.classList.remove('open'); roiModal.setAttribute('aria-hidden','true'); openRoi.focus(); }
+openRoi.addEventListener('click', openModal); closeRoi.addEventListener('click', closeModal); window.addEventListener('keydown',e=>{ if(e.key==='Escape' && roiModal.classList.contains('open')) closeModal(); });
+
+function estimateROI(vol, ahtMin, hourly){
+  // Simple model: automation handles 60% at 80% time reduction
+  const handled = vol * 0.6; const savedMin = handled * ahtMin * 0.8; const savedHours = savedMin/60; const dollars = savedHours * hourly * 12; return Math.round(dollars);
+}
+$('#calcRoi').addEventListener('click', ()=>{
+  const v = +$('#vol').value||0, a = +$('#aht').value||0, c = +$('#cost').value||0; const res = estimateROI(v,a,c);
+  animateCounter($('#roiOut'), res);
+});
+function animateCounter(el, to){
+  const from = 0; const dur = 800; const start = performance.now();
+  function step(t){ const p = clamp((t-start)/dur,0,1); const val = Math.floor(from + (to-from)*p); el.textContent = '$' + val.toLocaleString(); if(p<1 && !prefersReduced) requestAnimationFrame(step); }
+  step(start);
+}
+
+/* =========================
+   Scroll-to-top with progress ring
+   ========================= */
+const toTop = $('#toTop');
+function onScroll(){ const y=scrollY; toTop.hidden = y<200; const h = document.documentElement; const p=(h.scrollTop)/(h.scrollHeight-h.clientHeight); const c = toTop.querySelector('circle'); const r=22; const len=2*Math.PI*r; c.setAttribute('stroke-dasharray',len); c.setAttribute('stroke-dashoffset', (1-p)*len); }
+window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+toTop.addEventListener('click', ()=> window.scrollTo({top:0, behavior: prefersReduced? 'auto':'smooth'}));
+
+/* =========================
+   Command Palette (; or Ctrl/Cmd+K)
+   ========================= */
+const cmdModal=$('#cmdModal'), cmdInput=$('#cmdInput'), cmdResults=$('#cmdResults');
+const SECTIONS=['hero','capabilities','cases','process','pricing','faq','cta'];
+function openCmd(){ cmdModal.classList.add('open'); cmdModal.setAttribute('aria-hidden','false'); cmdInput.value=''; renderCmd(''); cmdInput.focus(); trapFocus(cmdModal); }
+function closeCmd(){ cmdModal.classList.remove('open'); cmdModal.setAttribute('aria-hidden','true'); }
+function renderCmd(q){ const items = SECTIONS.filter(s=> s.includes(q.toLowerCase())); cmdResults.innerHTML = items.map(s=>`<button class='btn' data-go='#${s}'>#${s}</button>`).join(' '); $$("[data-go]", cmdResults).forEach(b=> b.addEventListener('click', ()=>{ closeCmd(); smoothScrollTo(b.dataset.go); })); }
+window.addEventListener('keydown', e=>{ if((e.key==='k' && (e.ctrlKey||e.metaKey)) || e.key===';' ){ e.preventDefault(); openCmd(); } if(e.key==='Escape' && cmdModal.classList.contains('open')) closeCmd(); });
+cmdInput.addEventListener('input', e=> renderCmd(e.target.value)); $('#closeCmd').addEventListener('click', closeCmd);
+
+/* =========================
+   SEO Schema (Organization + FAQ)
+   ========================= */
+const org = {"@context":"https://schema.org","@type":"Organization","name":CONFIG.brandName,"url":"https://example.com","logo":"https://example.com/logo.svg","sameAs":["https://linkedin.com","https://x.com"]};
+const faq = {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How soon can we start?","acceptedAnswer":{"@type":"Answer","text":"Typically within 1–2 weeks following discovery."}},{"@type":"Question","name":"Which models & clouds do you support?","acceptedAnswer":{"@type":"Answer","text":"Model‑agnostic, deploy across major clouds with strong security posture."}}]};
+const ld = document.createElement('script'); ld.type='application/ld+json'; ld.textContent = JSON.stringify([org,faq]); document.head.appendChild(ld);
+
+/* =========================
+   One-time hero shimmer
+   ========================= */
+(function(){ const k = CONFIG.shimmerOnceKey; if(localStorage.getItem(k)){ $('#headline').classList.remove('shimmer'); } else { localStorage.setItem(k,'1'); } })();
+
+/* =========================
+   Brand bindings & misc
+   ========================= */
+$('#brandName').textContent = CONFIG.brandName; $('#brandName2').textContent = CONFIG.brandName; $('#year').textContent = new Date().getFullYear();
+
+</script>
+
+<!-- =========================
+     Customization Guide & TODO
+     =========================
+- Change brand name/tagline: edit CONFIG.brandName / CONFIG.tagline at top of <script>.
+- Colors: tweak CSS variables --cyan / --magenta / background in :root.
+- Type scale: adjust --step-* clamp() values.
+- Services: update CAPABILITIES array; icons: cpu|stack|voice|bot|flow|brief.
+- Case studies: update CASES array (title, bullets, kpi).
+- ROI math: function estimateROI().
+- Animations: set CONFIG.fps; respects prefers-reduced-motion.
+- Carousel: width = 320px cards; adjust in CSS (.cs-card) and JS translate logic.
+- Add analytics: hook button clicks with your events.
+- Forms/backend: connect Book Call / Download to your endpoints.
+
+TODO
+- Hook CMS or JSON source for capabilities/cases
+- Add analytics events and consent banner
+- Wire CTA buttons to Calendly/HubSpot
+- Add form backend & validation
+- Expand FAQ and pricing tiers per offering
+-->
+</body>
+</html>
